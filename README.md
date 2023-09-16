@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Site Audit App and Widget
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Requirements
+1. Build a UI which will accepts “url” this can be either the root (example.com) or a sub-folder (example.com/file-name.html)
+2. Use “DataForSEO” On-Page API (ENABLE BROWSER RENDERING test which includes all in Basic + Load resources + Load JavaScript + Enable browser rendering) to check the entered URL and display the result.
+3. The built tool should either embeddable as an iframe or should be to accept POST request and response with the “DataForSEO” output
+4. UI should be mobile-friendly
 
-## Available Scripts
+# Tools Used
+Frontend: ReactJs, Tailwind CSS
+API: DataForSEO On-page API
+Deployment: Railway
+Version Control: Git & Github
 
-In the project directory, you can run:
+# Explaination
+Search Component:
 
-### `npm start`
+The Search Component serves as the user's point of entry, facilitating the submission of a URL through an input form. Upon user interaction, the handleSubmit function orchestrates the initiation of an API request to DataforSEO, aimed at retrieving essential data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Data Component:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The Data Component is the central hub responsible for rendering crucial information to the user. Within this component, data retrieved from the DataforSEO API undergoes a rigorous filtering process, aligning it with specific usage and user requirements. Subsequently, the component further breaks down data into two distinct sub-components: Speed Insights and Heading Data.
 
-### `npm test`
+Speed Insights Sub-Component:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The Speed Insights Sub-Component specializes in presenting performance-related metrics for the queried website. Specifically, data related to website speed and performance is meticulously mapped to this component, ensuring a streamlined and informative display for the end user.
 
-### `npm run build`
+Heading Data Sub-Component:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The Heading Data Sub-Component focuses on organizing and rendering essential heading tags (h1, h2, h3, etc.) for the queried webpage. By effectively mapping and presenting these tags, users are provided with a clear overview of the page's structural hierarchy and content organization.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In summary, development efforts have resulted in a seamless and user-friendly web application. Through a user-initiated search, data retrieval from the DataforSEO API, meticulous data filtering, and organized data mapping to specific components, our application successfully presents users with comprehensive insights into webpage performance and content structure. This professional approach ensures an optimal user experience while delivering valuable data in a digestible format.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+# Iframe / Widget Usage
+    <iframe src="https://seoprojectgithubio-production.up.railway.app/" frameborder="0" width="400" height="800"></iframe>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Code Execution Steps
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone Repository Locally
+2. npm install
+3. npm start
